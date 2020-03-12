@@ -3,7 +3,6 @@ import requests
 import urllib
 import urllib.request
 import urllib.parse
-import json
 
 base_web='http://ml18y26c.pythonanywhere.com'
 
@@ -13,7 +12,7 @@ def post(session,action,data):
     return resp.json()
 
 @click.group()
-def test2():
+def client():
   pass
 
 @click.command()
@@ -108,14 +107,14 @@ def rate(professorid,modulecode,year,semester,rating):
     else:
         click.echo(response.json())
 
-test2.add_command(register)
-test2.add_command(login)
-test2.add_command(logout)
-test2.add_command(list)
-test2.add_command(view)
-test2.add_command(average)
-test2.add_command(rate)
+client.add_command(register)
+client.add_command(login)
+client.add_command(logout)
+client.add_command(list)
+client.add_command(view)
+client.add_command(average)
+client.add_command(rate)
 
 if __name__ == '__main__':
-  test2()
+  client()
 
