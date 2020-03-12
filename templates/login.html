@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LoginCC</title>
+</head>
+<body>
+<h1>welcome</h1>
+<form action="/login/" method="post">
+    {% csrf_token %}
+    <p>
+        Student Name:
+        <input type="text" name="name">
+    </p>
+     <p>
+        PASSWORD:
+        <input type="password" name="password">
+    </p>
+    <p>
+        <input type="submit" value="LOGIN">
+    </p>
+    <a href="/register/">Register</a>
+
+</form>
+</body>
+</html>
